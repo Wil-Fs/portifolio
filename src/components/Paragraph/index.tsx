@@ -3,10 +3,13 @@ import { Paragraph as ParagraphStyled } from './styles';
 export type Props = {
 	children: string;
 	type?: 'main' | 'secondary';
+	fontSize?: number;
 };
 
-const Paragraph = ({ children, type = 'main' }: Props) => (
-	<ParagraphStyled type={type}>{children}</ParagraphStyled>
+const Paragraph = ({ fontSize, children, type = 'main' }: Props) => (
+	<ParagraphStyled fontSize={fontSize} type={type}>
+		{children}
+	</ParagraphStyled>
 );
 
 export default Paragraph;

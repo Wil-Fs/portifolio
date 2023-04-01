@@ -8,15 +8,10 @@ export const GithubSection = styled.div`
 	img {
 		height: 157px;
 	}
-	.img-a {
-		margin-left: -212px;
-	}
 
 	@media (max-width: 768px) {
 		display: block;
-		.img-a,
-		.img-b {
-			margin: 0;
+		img {
 			width: 100%;
 			height: auto;
 		}
