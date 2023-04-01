@@ -9,10 +9,10 @@ export const Description = styled(Paragraph)`
 export const ButtonTheme = styled.button`
 	font-size: 10px;
 	font-weight: bold;
-	color: #eee;
-	background-color: #282a35;
+	color: ${(props) => props.theme.bgColorMain};
+	background-color: ${(props) => props.theme.mainColor};
 	padding: 8px;
-	border: 1px solid #282a35;
+	border: 1px solid ${(props) => props.theme.mainColor};
 	border-radius: 12px;
 	cursor: pointer;
 `;
@@ -21,4 +21,9 @@ export const SideBarContainer = styled.div`
 	position: sticky;
 	top: 80px;
 	left: 0;
+
+	@media (max-width: 768px) {
+		margin-bottom: 40px;
+		text-align: center;
+	}
 `;
